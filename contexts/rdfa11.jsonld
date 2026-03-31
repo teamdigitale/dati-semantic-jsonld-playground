@@ -21,7 +21,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "prov": "http://www.w3.org/ns/prov#",
     "sd": "http://www.w3.org/ns/sparql-service-description#",
-    "org": "http://www.w3.org/ns/org#",
     "gldp": "http://www.w3.org/ns/people#",
     "cnt": "http://www.w3.org/2008/content#",
     "dcat": "http://www.w3.org/ns/dcat#",
