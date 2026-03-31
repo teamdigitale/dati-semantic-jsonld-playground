@@ -16,8 +16,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/rdf-font/rdf-font.css">
+    <link rel="stylesheet" href="{{ site.baseUrl }}/static/css/fomantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseUrl }}/static/css/rdf-font/rdf-font.css">
     <style>
       /* fomantic overrides */
       html { scroll-padding-top: 5em; }
@@ -36,39 +36,29 @@
       i.rdf-icon-rdf.icon { font-family: 'rdf-font'; }
     </style>
 
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="{{ site.baseUrl }}/favicon.ico" />
 
-    <!-- Script tags -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-{{ ga | default: '42886053' }}-1', 'json-ld.org');
-      ga('send', 'pageview');
-    </script>
   </head>
 
   <body>
     <div class="ui top fixed menu">
       <div class="ui wide container">
         <!-- Brand -->
-        <a class="header item" href="/">
-          <img src="/images/json-ld-data-24.png" alt="JSON-LD logo">
+        <a class="header item" href="{{ site.baseUrl }}/">
+          <img src="{{ site.baseUrl }}/images/json-ld-data-24.png" alt="JSON-LD logo">
           <span>JSON-LD</span>
         </a>
 
         <!-- Main menu items -->
-        <a class="item {% if page.url == '/playground/' %}active{% endif %}" href="/playground/">
+        <a class="item {% if page.url == '/playground/' %}active{% endif %}" href="{{ site.baseUrl }}/playground/next">
           <i class="beer icon"></i> Playground
         </a>
 
-        <a class="item {% if page.url == '/learn/' %}active{% endif %}" href="/learn/">
+        <a class="item {% if page.url == '/learn/' %}active{% endif %}" href="{{ site.baseUrl }}/learn/">
           <i class="book icon"></i> Documentation
         </a>
 
-        <a class="item" href="/#developers">
+        <a class="item" href="{{ site.baseUrl }}/#developers">
           <i class="flask icon"></i> Developers
         </a>
 
@@ -95,11 +85,11 @@
             <a class="item" href="https://w3c.github.io/json-ld-cbor/">CBOR</a>
             <a class="item" href="https://github.com/w3c/json-ld-rc/">Recommended Context</a>
             <a class="item" href="https://json-ld.github.io/yaml-ld/">YAML-LD</a>
-            <a class="item" href="/spec/">1.0 drafts (historic)</a>
+            <a class="item" href="{{ site.baseUrl }}/spec/">1.0 drafts (historic)</a>
           </div>
         </div>
 
-        <a class="item {% if page.url == '/images/' %}active{% endif %}" href="/images/">
+        <a class="item {% if page.url == '/images/' %}active{% endif %}" href="{{ site.baseUrl }}/images/">
           <i class="image icon"></i> Branding
         </a>
       </div>
@@ -125,8 +115,8 @@
     </div>
 
     <!-- Script tags -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+    <script src="{{ site.baseUrl }}/static/js/jquery/jquery.min.js"></script>
+    <script src="{{ site.baseUrl }}/static/js/fomantic-ui/semantic.min.js"></script>
     <script>
       $('.ui.popup').each((i, el) => {
         $(el).prev().popup({ on: 'click', inline: true, preserve: true });
