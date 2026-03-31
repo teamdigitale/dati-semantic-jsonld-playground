@@ -10,8 +10,8 @@ on:
     branches:
       - "*"
 
-# Github token permissions.
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   lint:
